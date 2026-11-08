@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roses Florist - Pemesanan karangan papan bunga premium secara online untuk pernikahan, duka cita, grand opening, wisuda, dan momen berharga Anda.">
+    <title>Roses Florist - Karangan Papan Bunga Premium</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    
+    <header>
+        <div class="container nav-container">
+            <a href="#/" class="logo-link" aria-label="Beranda Roses Florist">
+                <img src="assets/logo.png" alt="Logo Roses Florist" class="site-logo-img" id="site-logo-img" onerror="this.style.display='none'">
+                <h1 class="logo-text">Roses<span>Florist</span></h1>
+            </a>
+            
+            <nav class="main-nav" id="main-navigation" aria-label="Navigasi Halaman">
+                <a href="#/" class="main-nav-link">Beranda</a>
+                <a href="#/katalog" class="main-nav-link">Katalog</a>
+                <a href="#/tentang" class="main-nav-link">Tentang Kami</a>
+                <a href="#" class="main-nav-link" onclick="window.location.hash='#/'; setTimeout(()=>{const el=document.getElementById('faq'); if(el) el.scrollIntoView({behavior:'smooth'});}, 60); return false;">FAQ</a>
+            </nav>
+
+            <div class="header-controls">
+                <a href="#/login" class="admin-profile-link" id="admin-profile-link" aria-label="Masuk sebagai admin" title="Masuk Admin">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
+                    <span class="admin-profile-label">Admin</span>
+                </a>
+                <button class="mobile-menu-toggle" type="button" aria-label="Buka menu navigasi" aria-controls="main-navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <main class="page-container">
+
+        <section class="page-view active" id="view-home">
+            
+            <div class="hero-banner">
+                <div class="hero-floral-decor" aria-hidden="true">
+                    <span class="hero-blossom hero-blossom-one"><i class="blossom-petal"></i><i class="blossom-petal"></i><i class="blossom-petal"></i><i class="blossom-petal"></i><i class="blossom-petal"></i><b class="blossom-center"></b></span>
+                    <span class="hero-blossom hero-blossom-two"><i class="blossom-petal"></i><i class="blossom-petal"></i><i class="blossom-petal"></i><i class="blossom-petal"></i><i class="blossom-petal"></i><b class="blossom-center"></b></span>
+                    <span class="hero-blossom hero-blossom-three"><i class="blossom-petal"></i><i class="blossom-petal"></i><i class="blossom-petal"></i><i class="blossom-petal"></i><i class="blossom-petal"></i><b class="blossom-center"></b></span>
+                    <span class="hero-petal hero-petal-one"></span>
+                    <span class="hero-petal hero-petal-two"></span>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="assets/hero-board.png" alt="Papan Bunga Standing Premium Roses Florist" class="hero-img" onerror="this.src='assets/board-wedding.jpg'">
+                </div>
+                <div class="hero-content">
+                    <span class="hero-kicker"><span></span> Florist premium di Pandaan</span>
+                    <h2 class="hero-tagline" style="font-family: var(--font-serif); font-size: 3rem; font-weight: 700; line-height: 1.2;">
+                        Rangkaian indah untuk <em>momen yang bermakna.</em>
+                    </h2>
+                    <p class="hero-description" style="font-size: 1.05rem; margin-top: 1rem; color: var(--color-muted); line-height: 1.6;">
+                        Penyedia karangan papan bunga standing premium dengan desain editorial minimalis modern. Kami merangkai keindahan mawar dan pikok segar untuk menyempurnakan setiap ucapan selamat, sukacita, dan simpati terdalam Anda.
+                    </p>
+                    <div class="hero-cta-buttons" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="#/katalog" class="hero-btn" style="background-color: var(--color-primary-sage); border-color: var(--color-primary-sage); box-shadow: none;">Lihat Katalog</a>
+                    </div>
+                    <div class="hero-service-points" aria-label="Keunggulan layanan Roses Florist">
+                        <span><b>✦</b> Bunga segar pilihan</span>
+                        <span><b>✦</b> Rangkaian sesuai momen</span>
+                        <span><b>✦</b> Pengiriman tepat waktu</span>
+                    </div>
+                </div>
+                <aside class="hero-moment-card">
+                    <span class="hero-moment-icon" aria-hidden="true">&#10048;</span>
+                    <div>
+                        <strong>Setiap bunga punya cerita</strong>
+                        <p>Dari ucapan bahagia hingga simpati terdalam.</p>
+                    </div>
+                </aside>
+            </div>
+
+            
+            <div class="container why-us-section" style="margin-bottom: 4rem;">
+                <div class="section-header">
+                    <span class="section-subtitle">Mengapa Memilih Kami</span>
+                    <h2 class="section-title">Roses Florist Keunggulan</h2>
+                </div>
+                <div class="why-us-minimal-grid">
+                    <div class="why-us-minimal-card">
+                        <div class="icon-holder">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                        </div>
+                        <h3>Fresh Flower</h3>
+                        <p>Bunga segar mawar dan pikok pilihan yang dirangkai langsung di hari pengiriman.</p>
+                    </div>
+                    <div class="why-us-minimal-card">
+                        <div class="icon-holder">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                        </div>
+                        <h3>Fast Delivery</h3>
+                        <p>Pengiriman tepat waktu sebelum rangkaian acara dimulai, aman sampai lokasi.</p>
+                    </div>
+                    <div class="why-us-minimal-card">
+                        <div class="icon-holder">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                        </div>
+                        <h3>Custom Design</h3>
+                        <p>Kustomisasi bebas untuk desain banner & ucapan langsung lewat diskusi WhatsApp admin.</p>
+                    </div>
+                    <div class="why-us-minimal-card">
+                        <div class="icon-holder">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3>Trusted Florist</h3>
+                        <p>Telah dipercaya oleh ratusan pelanggan korporasi maupun keluarga di Pandaan.</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="container categories-section">
+                <div class="section-header">
+                    <span class="section-subtitle">Kategori Pilihan</span>
+                    <h2 class="section-title">Koleksi Karangan Papan Bunga</h2>
+                </div>
+                <div class="premium-kategori-grid">
+                    <div class="kategori-card-premium" onclick="katalogFilterByCategory('Karangan Bunga Ucapan Selamat')">
+                        <img src="assets/board-anniversary.jpg" alt="Karangan Bunga Ucapan Selamat" onerror="this.src='assets/hero-board.png'">
+                        <div class="kategori-card-overlay">
+                            <h3>Ucapan Selamat</h3>
+                            <span>Grand Opening & Wisuda</span>
+                        </div>
+                    </div>
+                    <div class="kategori-card-premium" onclick="katalogFilterByCategory('Karangan Bunga Duka Cita')">
+                        <img src="assets/board-wedding.jpg" alt="Karangan Bunga Duka Cita" onerror="this.src='assets/hero-board.png'">
+                        <div class="kategori-card-overlay">
+                            <h3>Duka Cita</h3>
+                            <span>Simpati & Belasungkawa</span>
+                        </div>
+                    </div>
+                    <div class="kategori-card-premium" onclick="katalogFilterByCategory('Karangan Bunga Happy Wedding')">
+                        <img src="assets/board-wedding1.png" alt="Karangan Bunga Happy Wedding" onerror="this.src='assets/board-wedding.jpg'">
+                        <div class="kategori-card-overlay">
+                            <h3>Happy Wedding</h3>
+                            <span>Pernikahan & Resepsi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="container products-section" id="katalog">
+                <div class="section-header">
+                    <span class="section-subtitle">Paling Diminati</span>
+                    <h2 class="section-title">Koleksi Best Seller</h2>
+                </div>
+                <div class="products-grid" id="main-products-grid">
+                    
+                </div>
+                <div class="view-all-katalog-wrapper" style="text-align: center; margin-top: 2.5rem; margin-bottom: 4rem;">
+                    <a href="#/katalog" class="hero-btn" style="background-color: var(--color-white); border-color: var(--color-border); color: var(--color-sage-dark); box-shadow: none;">Lihat Semua Produk &rarr;</a>
+                </div>
+            </div>
+
+            
+            
+            <section class="faq-section container" id="faq" style="margin-bottom: 4rem;">
+                <div class="section-header">
+                    <h2 class="section-title">FAQ</h2>
+                </div>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">Bagaimana cara memesan?</button>
+                        <div class="faq-answer" style="display:none;">Pilih desain dari katalog, buka halaman detail produk, lalu klik tombol "Pesan via WhatsApp". Pesan otomatis berisi detail produk akan terbuka di WhatsApp, dan tim kami akan membalas untuk konfirmasi warna bunga, tulisan ucapan, dan pengiriman.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">Apakah bisa custom desain?</button>
+                        <div class="faq-answer" style="display:none;">Sangat bisa. Anda bebas merequest warna desain banner, isi tulisan ucapan, maupun perpaduan warna bunga. Klik tombol Chat Custom di pojok kanan bawah untuk mendiskusikannya langsung via WhatsApp.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">Berapa lama pengerjaan?</button>
+                        <div class="faq-answer" style="display:none;">Proses pembuatan standing board bunga biasanya memakan waktu 4-8 jam setelah pesanan dikonfirmasi dan tulisan disepakati di WhatsApp. Kami menyarankan pemesanan H-1 acara.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">Bagaimana sistem pembayaran?</button>
+                        <div class="faq-answer" style="display:none;">Setelah detail pesanan disepakati via WhatsApp, kami akan menginformasikan total biaya. Pembayaran dapat dilakukan via transfer bank (BCA atau Mandiri) dengan mengirimkan bukti transfer ke nomor WhatsApp kami.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';">Apakah bisa kirim luar kota?</button>
+                        <div class="faq-answer" style="display:none;">Kami melayani pengiriman gratis dalam radius 5 km dari toko kami (area Pandaan). Untuk radius di luar 5 km, biaya ongkos kirim disepakati langsung via WhatsApp.</div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="page-view" id="view-katalog">
+            <div class="container katalog-page-container">
+                <div class="detail-back-link">
+                    <a href="#/"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:2px"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Kembali ke Beranda</a>
+                </div>
+                <div class="section-header">
+                    <span class="section-subtitle">Semua Koleksi</span>
+                    <h2 class="section-title">Katalog Papan Bunga Standing</h2>
+                </div>
+
+                <div class="katalog-toolbar">
+                    <div class="katalog-search-wrapper">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <input type="text" id="katalog-search-input" class="katalog-search-input" placeholder="Cari nama papan bunga, mis. wisuda, wedding...">
+                    </div>
+                    <div class="katalog-category-list" id="katalog-category-list">
+                        
+                    </div>
+                </div>
+
+                <div class="products-grid" id="katalog-products-grid">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="page-view" id="view-detail">
+            <div class="container detail-container">
+                <div class="detail-back-link">
+                    <a href="#/"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:2px"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Kembali ke Beranda</a>
+                </div>
+                
+                <div class="detail-layout">
+                    
+                    <div class="detail-gallery-panel">
+                        <div class="preview-board-container" id="preview-board-container">
+                            <img src="assets/board-wisuda.jpg" alt="Foto Papan Bunga Detail" class="detail-main-image" id="detail-board-image">
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="detail-info-panel">
+                        <span class="detail-category" id="detail-product-category">Kategori Acara</span>
+                        <h2 class="detail-title" id="detail-product-name">Nama Paket Papan Bunga</h2>
+                        <span class="detail-product-code" id="detail-product-code"></span>
+                        
+                        
+                        <div class="detail-price-box">
+                            <span class="detail-price" id="detail-product-price">Rp 500.000</span>
+                        </div>
+                        
+                        
+                        <div class="detail-options-group">
+                            <span class="option-label">Spesifikasi Ukuran:</span>
+                            <p id="detail-product-size" style="font-size: 0.9rem; font-weight: 600; color: var(--color-dark); background: var(--color-background); padding: 8px 12px; border-radius: 6px; border: 1px solid var(--color-border); display: inline-block;">-</p>
+                        </div>
+
+                        <div class="order-contact-form">
+                            <span class="order-contact-title">Data pemesan</span>
+                            <p>Isi data singkat ini agar pesanan tercatat dan kami dapat menghubungi Anda.</p>
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label for="order-customer-name">Nama</label>
+                                    <input id="order-customer-name" class="form-input" type="text" autocomplete="name" placeholder="Nama Anda">
+                                </div>
+                                <div class="form-group">
+                                    <label for="order-customer-phone">Nomor WhatsApp</label>
+                                    <input id="order-customer-phone" class="form-input" type="tel" autocomplete="tel" placeholder="08xxxxxxxxxx">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail-description-group">
+                            <h4>Deskripsi Produk:</h4>
+                            <p id="detail-product-description">Deskripsi produk.</p>
+                            <h4>Bahan & Rincian Bunga:</h4>
+                            <p id="detail-product-materials">Deskripsi bunga yang digunakan.</p>
+                            <p id="detail-product-height">Estimasi tinggi papan bunga berdiri.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="sticky-booking-bar">
+                <div class="container booking-bar-content">
+                    <div class="booking-price-summary">
+                        <span class="summary-label">Harga Produk:</span>
+                        <span class="summary-price" id="sticky-total-price">Rp 500.000</span>
+                    </div>
+                    <button class="order-submit-btn whatsapp-order-btn" onclick="orderProductViaWhatsApp()">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Pesan via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-view" id="view-tentang">
+            <div class="container about-container">
+                <div class="detail-back-link">
+                    <a href="#/"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:2px"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Kembali ke Beranda</a>
+                </div>
+
+                <div class="about-hero">
+                    <span class="section-subtitle">Kenali Kami</span>
+                    <h2 class="view-title-main">Tentang Roses Florist</h2>
+                    <p class="view-subtitle">Merangkai bunga terbaik untuk setiap momen berharga Anda, dengan sentuhan personal dan kualitas premium sejak awal berdiri.</p>
+                </div>
+
+                <div class="about-story-grid">
+                    <div class="about-story-text">
+                        <h3>Cerita Kami</h3>
+                        <p>Roses Florist berawal dari kecintaan pada bunga dan keinginan menghadirkan karangan papan bunga standing yang rapi, elegan, dan pantas untuk setiap acara penting — mulai dari pernikahan, grand opening, hingga ucapan duka cita.</p>
+                        <p>Setiap papan bunga dirangkai langsung oleh tim kami dengan bunga segar pilihan, memastikan tampilan tetap segar dan indah saat tiba di lokasi acara Anda.</p>
+                    </div>
+                    <div class="about-story-image">
+                        <img src="assets/hero-board.png" alt="Proses Merangkai Papan Bunga Roses Florist" onerror="this.style.display='none'">
+                    </div>
+                </div>
+
+                <div class="about-vm-grid">
+                    <div class="about-vm-card">
+                        <span class="about-vm-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                        </span>
+                        <h4>Visi</h4>
+                        <p>Menjadi florist standing bunga pilihan utama yang dipercaya untuk setiap momen istimewa di Jawa Timur dan sekitarnya.</p>
+                    </div>
+                    <div class="about-vm-card">
+                        <span class="about-vm-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                        </span>
+                        <h4>Misi</h4>
+                        <p>Menghadirkan kualitas bunga premium, pelayanan ramah, serta pengiriman tepat waktu di setiap pesanan.</p>
+                    </div>
+                    <div class="about-vm-card">
+                        <span class="about-vm-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </span>
+                        <h4>Nilai Kami</h4>
+                        <p>Kejujuran, ketelitian, dan cinta pada setiap rangkaian bunga yang kami buat untuk pelanggan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-view" id="view-login">
+            <div class="container auth-single-container">
+                <div class="auth-form-card admin-login-card">
+                    <div class="auth-header">
+                        <span class="section-subtitle">Khusus Pengelola</span>
+                        <h3>Masuk Admin</h3>
+                        <p>Masuk untuk mengelola foto katalog pada perangkat ini.</p>
+                    </div>
+                    <form id="admin-login-form">
+                        <div class="form-group">
+                            <label for="admin-email">Email</label>
+                            <input id="admin-email" type="email" class="form-input" autocomplete="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="admin-password">Kata sandi</label>
+                            <div class="password-input-wrapper">
+                                <input id="admin-password" type="password" class="form-input" autocomplete="current-password" required>
+                                <button id="admin-password-toggle" class="password-toggle-btn" type="button" onclick="toggleAdminPasswordVisibility()" aria-label="Tampilkan kata sandi" aria-pressed="false" title="Tampilkan kata sandi">
+                                    <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="admin-login-error" id="admin-login-error" role="alert"></p>
+                        <button type="submit" class="submit-btn auth-btn">Masuk ke Dashboard</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-view" id="view-admin">
+            <div class="container admin-page-container">
+                <div class="admin-page-heading">
+                    <div>
+                        <span class="section-subtitle">Area Pengelola</span>
+                        <h2 class="view-title-main">Dashboard Admin</h2>
+                        <p class="view-subtitle">Pantau pesanan WhatsApp dan kelola katalog dalam satu tempat.</p>
+                    </div>
+                    <button class="admin-logout-button" type="button" onclick="adminLogout()">Keluar</button>
+                </div>
+                <div class="admin-summary-grid">
+                    <article class="admin-summary-card"><span>Pesanan via WhatsApp</span><strong id="admin-order-count">0</strong><small>tercatat dari website</small></article>
+                    <article class="admin-summary-card"><span>Produk katalog</span><strong id="admin-product-count">0</strong><small>siap ditampilkan</small></article>
+                </div>
+
+                <section class="admin-section-card">
+                    <div class="admin-section-heading">
+                        <div><span class="section-subtitle">Pesanan Masuk</span><h3>Pesanan yang dikirim ke WhatsApp</h3></div>
+                        <button class="admin-clear-orders" type="button" onclick="clearAdminOrders()">Hapus riwayat</button>
+                    </div>
+                    <p class="admin-section-note">Data dicatat ketika pelanggan menekan tombol kirim pesanan ke WhatsApp.</p>
+                    <div class="admin-orders-list" id="admin-orders-list"></div>
+                </section>
+
+                <section class="admin-section-card admin-catalog-section">
+                    <div class="admin-section-heading">
+                        <div><span class="section-subtitle">Katalog</span><h3>Kelola produk</h3></div>
+                        <div class="admin-catalog-actions">
+                            <button class="admin-import-products-button" type="button" onclick="importDefaultCatalog()">Impor katalog awal</button>
+                            <button class="admin-add-product-button" type="button" onclick="openAddProductModal()">+ Tambah Produk</button>
+                        </div>
+                    </div>
+                    <div class="admin-product-grid" id="admin-product-grid"></div>
+                </section>
+                <p class="admin-storage-note">Pesanan dan perubahan katalog tersimpan di browser/perangkat ini. Agar dapat dipantau dari perangkat lain, data perlu dihubungkan ke server/database.</p>
+            </div>
+        </section>
+
+        <div class="admin-product-modal" id="admin-product-modal" aria-hidden="true">
+            <div class="admin-product-modal-card" role="dialog" aria-modal="true" aria-labelledby="admin-product-modal-title">
+                <div class="admin-modal-heading">
+                    <div><span class="section-subtitle">Katalog Baru</span><h3 id="admin-product-modal-title">Tambah Produk</h3></div>
+                    <button class="admin-modal-close" type="button" onclick="closeAddProductModal()" aria-label="Tutup form tambah produk">&times;</button>
+                </div>
+                <form id="admin-add-product-form" onsubmit="addCatalogProduct(event)">
+                    <div class="form-grid-2">
+                        <div class="form-group"><label for="new-product-code">Kode produk</label><input id="new-product-code" class="form-input" type="text" placeholder="Contoh: RF-US08" required></div>
+                        <div class="form-group"><label for="new-product-category">Kategori</label><select id="new-product-category" class="form-input" required><option value="Karangan Bunga Ucapan Selamat">Ucapan Selamat</option><option value="Karangan Bunga Duka Cita">Duka Cita</option><option value="Karangan Bunga Happy Wedding">Happy Wedding</option></select></div>
+                    </div>
+                    <div class="form-group"><label for="new-product-name">Nama produk</label><input id="new-product-name" class="form-input" type="text" required></div>
+                    <div class="form-grid-2">
+                        <div class="form-group"><label for="new-product-price">Harga (Rp)</label><input id="new-product-price" class="form-input" type="text" inputmode="numeric" autocomplete="off" placeholder="Contoh: 350.000" oninput="formatPriceInput(this)" required></div>
+                        <div class="form-group"><label for="new-product-size">Ukuran</label><input id="new-product-size" class="form-input" type="text" placeholder="Contoh: 200 x 120 cm" required></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-product-image-file">Foto produk</label>
+                        <input id="new-product-image-file" class="form-input admin-new-image-input" type="file" accept="image/*" required>
+                        <span class="input-hint">Pilih foto dari galeri atau kamera perangkat. Maksimal 5 MB.</span>
+                    </div>
+                    <div class="form-group"><label for="new-product-description">Deskripsi produk</label><textarea id="new-product-description" class="form-input" rows="4" required></textarea></div>
+                    <p class="admin-product-form-error" id="admin-product-form-error" role="alert"></p>
+                    <button class="admin-save-button" type="submit">Simpan Produk Baru</button>
+                </form>
+            </div>
+        </div>
+
+        <section class="page-view" id="view-custom">
+            <div class="container custom-request-container">
+                <div class="custom-request-header">
+                    <h2 class="view-title-main">Request Papan Bunga Sesuai Kebutuhan</h2>
+                    <p class="view-subtitle">Tidak menemukan desain papan bunga standing yang pas? Isi formulir berikut dan kirimkan melalui WhatsApp — kami akan merangkainya secara custom!</p>
+                </div>
+
+                <div class="custom-layout-form">
+                    <form id="custom-request-form" class="custom-request-form-card" onsubmit="submitCustomRequest(event)">
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="custom-customer-name">Nama Pemesan:</label>
+                                <input type="text" id="custom-customer-name" class="form-input" autocomplete="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="custom-customer-phone">Nomor WhatsApp:</label>
+                                <input type="tel" id="custom-customer-phone" class="form-input" autocomplete="tel" placeholder="08xxxxxxxxxx" required>
+                            </div>
+                        </div>
+                        <div class="form-grid-2">
+                            
+                            <div class="form-group">
+                                <label for="custom-event-type">Kategori Papan Bunga:</label>
+                                <select id="custom-event-type" class="form-input" required>
+                                    <option value="">-- Pilih Kategori --</option>
+                                    <option value="Karangan Bunga Ucapan Selamat">Karangan Bunga Ucapan Selamat</option>
+                                    <option value="Karangan Bunga Duka Cita">Karangan Bunga Duka Cita</option>
+                                    <option value="Karangan Bunga Happy Wedding">Karangan Bunga Happy Wedding</option>
+                                </select>
+                            </div>
+                                                
+                            <div class="form-group">
+                                <label for="custom-size">Ukuran Papan Bunga:</label>
+                                <select id="custom-size" class="form-input" required>
+                                    <option value="">-- Pilih Ukuran --</option>
+                                    <option value="200 x 120 cm">200 x 120 cm (Standar)</option>
+                                    <option value="85 x 85 cm">85 x 85 cm (Bunga Papan Kecil)</option>
+                                    <option value="80 x 120 cm">80 x 120 cm (Bunga Standing)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-group" style="background-color: var(--color-background); padding: 12px; border-radius: 6px; border: 1px solid var(--color-border); margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.4;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -3px; margin-right: 4px;"><circle cx="13.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="17" cy="10" r="1.5" fill="currentColor" stroke="none"/><circle cx="8.5" cy="7.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="6" cy="12" r="1.5" fill="currentColor" stroke="none"/><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 3 6 5 6 1.5 0 3-1 4-3 1 2 2.5 3 4 3 2 0 5-1.5 5-6 0-5.5-4-10-8-10Z"/></svg> <strong>Desain Banner & Tulisan Ucapan:</strong> Untuk kustomisasi desain banner (background papan) dan isi tulisan ucapan/pita, silakan diskusikan langsung dengan Admin via WhatsApp setelah permintaan ini terkirim.</p>
+                        </div>
+
+                        <div class="form-grid-2">
+                            
+                            <div class="form-group">
+                                <label for="custom-budget-range">Rentang Anggaran (Budget):</label>
+                                <select id="custom-budget-range" class="form-input" required>
+                                    <option value="Di bawah Rp 500.000">Di bawah Rp 500.000</option>
+                                    <option value="Rp 500.000 - Rp 800.000">Rp 500.000 - Rp 800.000</option>
+                                    <option value="Rp 800.000 - Rp 1.200.000">Rp 800.000 - Rp 1.200.000</option>
+                                    <option value="Di atas Rp 1.200.000">Di atas Rp 1.200.000 (VVIP)</option>
+                                </select>
+                            </div>
+
+                            
+                            <div class="form-group">
+                                <label for="custom-delivery-date">Tanggal Dibutuhkan:</label>
+                                <input type="date" id="custom-delivery-date" class="form-input" required>
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <label for="custom-location">Lokasi Pengiriman (Nama Gedung / Kota):</label>
+                            <input type="text" id="custom-location" class="form-input" placeholder="Contoh: Gedung SMESCO Jakarta / Balai Sudirman" required>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <label for="custom-shipping-area">Area Pengiriman:</label>
+                            <select id="custom-shipping-area" class="form-input" required>
+                                <option value="pandaan">Pandaan & sekitarnya (radius ±5km) — Gratis</option>
+                                <option value="sukorejo">Sukorejo, Purwosari, Prigen (radius ±10km) — +Rp 20.000</option>
+                                <option value="pasuruan">Pasuruan Kota, Gempol (radius ±15km) — +Rp 35.000</option>
+                                <option value="daerah_lain">Daerah lain (di luar area di atas) — perlu konfirmasi admin</option>
+                            </select>
+                            <span class="input-hint">Pilih area pengiriman untuk memperkirakan ongkos kirim.</span>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <label for="custom-reference-img">Upload Foto Referensi Papan Bunga (Opsional):</label>
+                            <div class="custom-file-upload">
+                                <input type="file" id="custom-reference-img" accept="image/*" onchange="previewCustomRef(event)">
+                                <div class="upload-placeholder" id="custom-upload-text">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+                                    <span>Pilih gambar referensi papan bunga standing</span>
+                                </div>
+                                <img id="custom-ref-preview" class="image-upload-preview" alt="Referensi Karangan Bunga" style="display: none;">
+                            </div>
+                        </div>
+
+                        
+                        <button type="submit" class="custom-submit-cta">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            <span>Kirim Permintaan Custom via WhatsApp</span>
+                        </button>
+
+                        
+                        <div class="custom-trust-badges">
+                            <div class="trust-badge-item">
+                                <span class="decor-icon">...</span>
+                                <span>Konsultasi gratis via WhatsApp</span>
+                            </div>
+                            <div class="trust-badge-item">
+                                <span class="decor-icon">...</span>
+                                <span>Bebas tentukan warna, jenis bunga & tulisan pita</span>
+                            </div>
+                        </div>
+
+                        <p class="custom-submit-hint">Permintaan akan terkirim langsung ke WhatsApp admin Roses Florist. Silakan lanjutkan diskusi desain banner & tulisan ucapan di WhatsApp, dan jangan lupa kirim foto referensi Anda di sana.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <a class="custom-whatsapp-float" href="https://wa.me/6282238782947?text=Halo%20Admin%20Roses%20Florist%2C%20saya%20mau%20custom%20papan%20bunga." target="_blank" rel="noopener" aria-label="Chat WhatsApp untuk pesanan custom">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Chat Custom</span>
+    </a>
+
+    
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col footer-about">
+                <h3 class="footer-logo">Roses<span>Florist</span></h3>
+                <p>Spesialis standing papan bunga berdiri elegan untuk berbagai seremonial bisnis dan acara keluarga penting Anda.</p>
+                <p class="footer-copyright">&copy; 2026 Roses Florist.<br>Seluruh hak cipta dilindungi.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Alamat</h4>
+                <p class="footer-address">Jl. Pahlawan Sunaryo, Pesantren, Pandaan, Kec. Pandaan, Pasuruan, Jawa Timur 67156</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/rosesflorist.pandaan/" target="_blank" rel="noopener" class="social-btn" id="social-instagram" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+                    <a href="https://www.tiktok.com/@rosesflorist.pandaan?_r=1&amp;_t=ZS-98UdnFhwXJt" target="_blank" rel="noopener" class="social-btn" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82c-.9-.88-1.45-2.02-1.6-3.32h-3.15v13.5a2.9 2.9 0 1 1-2.05-2.77V9.9a5.99 5.99 0 1 0 5.2 5.94V9.35a7.5 7.5 0 0 0 4.6 1.57V7.78c-1.14 0-2.2-.36-3-.96-.01 0-.01-.01 0 0z"/></svg></a>
+                    <a href="#" class="social-btn" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.5-3H13.5V8.4c0-.87.24-1.46 1.5-1.46H16.6V4.35c-.26-.03-1.15-.1-2.18-.1-2.16 0-3.64 1.32-3.64 3.74v2.5H8.5v3h2.28V21h2.72z"/></svg></a>
+                    <a href="#" class="social-btn" aria-label="X / Twitter"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H22l-7.6 8.7L23.3 21H16.7l-5.2-6.6L5.6 21H2.4l8.1-9.3L1.6 3h6.8l4.7 6.1L18.9 3zm-1.2 16.2h1.7L7.4 4.7H5.6l12.1 14.5z"/></svg></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Kontak</h4>
+                <p class="footer-contact-lead">Hubungi kami untuk info lebih lanjut.</p>
+                <ul class="footer-contact-list">
+                    <li>
+                        <span class="footer-contact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                        <a href="tel:+6282238782947" id="footer-phone">+62 822-3878-2947</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+                        <a href="https://wa.me/6282238782947" target="_blank" rel="noopener" id="footer-whatsapp">+62 822-3878-2947</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                        <a href="mailto:order@rosesflorist.com" id="footer-email">order@rosesflorist.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Info Terbaru</h4>
+                <ul class="footer-info-list">
+                    <li>
+                        <a href="#/">Tips Memilih Papan Bunga Standing</a>
+                        <span class="footer-info-date">17 Juni 2025</span>
+                    </li>
+                    <li>
+                        <a href="#/">Promo Papan Bunga Grand Opening</a>
+                        <span class="footer-info-date">17 Juni 2025</span>
+                    </li>
+                    <li><a href="#/login">Login Admin</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Roses Florist. Halaman ini dirancang eksklusif, rapi, dan responsif.</p>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/app.js"></script>
+</body>
