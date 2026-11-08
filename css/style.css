@@ -651,9 +651,10 @@ header {
 }
 
 .product-code-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 0.42rem;
     background-color: var(--color-dusty-rose-dark);
     color: var(--color-white);
     padding: 4px 10px;
@@ -663,6 +664,8 @@ header {
     letter-spacing: 0.5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
+.product-title-group { min-width: 0; }
 
 .product-info {
     padding: 1.5rem;
@@ -5093,6 +5096,7 @@ header {
     .product-category-tag { top: 8px; left: 8px; padding: 3px 7px; font-size: 0.53rem; }
     .product-info { padding: 0.75rem; }
     .product-title { font-size: 0.88rem; min-height: auto; }
+    .product-code-badge { margin-bottom: .32rem; padding: 3px 7px; font-size: .58rem; }
     .product-footer { flex-direction: column; align-items: stretch; gap: 0.65rem; }
     .order-action-btn { width: 100%; text-align: center; }
     .why-us-minimal-grid { grid-template-columns: 1fr; gap: 1rem; margin: 1.5rem 0; }

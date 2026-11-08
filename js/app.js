@@ -791,20 +791,23 @@ function initHomeView() {
 
 function buildProductCardHTML(product) {
     const price = product.price || 550000;
+    const productId = String(product.id).replace(/'/g, "\\'");
     return `
         <div class="product-image-container">
-            <img src="${product.image_url}" alt="${product.name}" class="product-image" loading="lazy" onerror="this.src='assets/hero-board.jpg'">
-            <span class="product-category-tag">${product.category}</span>
-            <span class="product-code-badge">${product.code || ''}</span>
+            <img src="${product.image_url}" alt="${escapeHtml(product.name)}" class="product-image" loading="lazy" onerror="this.src='assets/hero-board.jpg'">
+            <span class="product-category-tag">${escapeHtml(product.category)}</span>
         </div>
         <div class="product-info">
-            <h3 class="product-title">${product.name}</h3>
-            <p class="product-meta-desc">Ukuran: ${product.size || '200 x 120 cm'}</p>
+            <div class="product-title-group">
+                <span class="product-code-badge">${escapeHtml(product.code || '')}</span>
+                <h3 class="product-title">${escapeHtml(product.name)}</h3>
+            </div>
+            <p class="product-meta-desc">Ukuran: ${escapeHtml(product.size || '200 x 120 cm')}</p>
             <div class="product-footer">
                 <div class="price-stack">
                     <span class="product-price">Rp ${formatRupiah(price)}</span>
                 </div>
-                <button class="order-action-btn" onclick="goToDetail(${product.id})">Pesan</button>
+                <button class="order-action-btn" type="button" onclick="goToDetail('${productId}')">Pesan</button>
             </div>
         </div>
     `;
