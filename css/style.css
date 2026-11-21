@@ -5147,6 +5147,9 @@ header {
    benar-benar aktif, supaya halaman lain tidak menyisakan celah kosong di bawah. */
 body { padding-bottom: 0; }
 body:has(#view-detail.active) { padding-bottom: 80px; }
+/* Tombol konsultasi custom disembunyikan di detail produk agar tidak bertumpuk
+   dengan bar Pesan via WhatsApp. */
+body.is-detail-view .custom-whatsapp-float { display: none; }
 @media (max-width: 768px) {
     body:has(#view-detail.active) { padding-bottom: 96px; }
 }

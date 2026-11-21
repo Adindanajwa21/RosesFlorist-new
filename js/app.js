@@ -241,6 +241,7 @@ function router() {
         activeView.classList.add('active');
     }
 
+    document.body.classList.toggle('is-detail-view', route.viewId === 'view-detail');
     route.init();
 
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -841,7 +842,51 @@ function goToDetail(productId) {
 // ====================================================================
 // Pesan via WhatsApp
 // ====================================================================
-function orderProductViaWhatsApp(productId) {
+async function orderProductViaWhatsApp(productId) {
+    const pid = productId != null ? productId : selectedProductId;
+    const product = currentProducts.find(p => p.id == pid);
+    if (!product) return;
+
+    const customerName = document.getElementById('order-customer-name')?.value.trim();
+    const customerPhone = document.getElementById('order-customer-phone')?.value.trim();
+    if (!customerName || !customerPhone) {
+        showToast('Mohon isi nama dan nomor WhatsApp terlebih dahulu.');
+        document.getElementById(!customerName ? 'order-customer-name' : 'order-customer-phone')?.focus();
+        return;
+    }
+
+    const productName = product.name || 'Papan Bunga';
+    const productPrice = product.price || 550000;
+    const productCategory = product.category || 'Papan Bunga';
+    const message =
+        'Halo Kak! 👋🏻\n\n' +
+        'Perkenalkan, saya ' + customerName + '. Saya tertarik dengan katalog bunga yang ada di website Kakak.\n\n' +
+        'Saya ingin bertanya, apakah untuk pesanan bunga berikut masih bisa ya, Kak?\n\n' +
+        '🌷 *Detail Bunga:*\n\n' +
+        '- Kategori: ' + productCategory + '\n' +
+        '- Nama Produk: ' + productName + '\n' +
+        '- Harga: Rp ' + formatRupiah(productPrice) + '\n\n' +
+        'Apakah bunga tersebut masih tersedia dan bisa dipesan ya, Kak?\n\n' +
+        'Terima kasih! 😊';
+
+    // Buka jendela saat klik masih aktif, lalu catat pesanan sebelum diarahkan.
+    const waPopup = window.open('', '_blank');
+    if (waPopup) waPopup.opener = null;
+    await saveAdminOrder({
+        id: Date.now(),
+        type: 'Produk katalog',
+        customerName,
+        phone: customerPhone,
+        productName,
+        details: `${productCategory} - Rp ${formatRupiah(productPrice)}`,
+        createdAt: new Date().toISOString()
+    });
+    const waUrl = 'https://wa.me/' + WHATSAPP_ADMIN_NUMBER + '?text=' + encodeURIComponent(message);
+    if (waPopup) waPopup.location.href = waUrl;
+    else window.location.href = waUrl;
+}
+
+function legacyOrderProductViaWhatsApp(productId) {
     const pid = productId != null ? productId : selectedProductId;
     const product = currentProducts.find(p => p.id == pid);
     if (!product) return;
