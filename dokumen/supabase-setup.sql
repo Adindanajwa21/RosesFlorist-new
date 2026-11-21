@@ -49,7 +49,10 @@ returns boolean
 language sql
 stable
 as $$
-    select coalesce(auth.jwt() ->> 'email', '') = 'admin@rosesflorist.com';
+    select lower(coalesce(auth.jwt() ->> 'email', '')) in (
+        'najwadinda746@gmail.com',
+        'rosesflorist608@gmail.com'
+    );
 $$;
 
 alter table public.products enable row level security;
