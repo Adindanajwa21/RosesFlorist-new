@@ -6,7 +6,7 @@ returns boolean
 language sql
 stable
 as $$
-    select coalesce(auth.jwt() ->> 'email', '') = 'GANTI_DENGAN_EMAIL_ADMIN_ANDA@gmail.com';
+    select coalesce(auth.jwt() ->> 'email', '') = 'najwadinda746@gmail.com';
 $$;
 
 -- Pastikan struktur tabel orders cocok dengan website.
