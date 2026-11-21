@@ -10,7 +10,8 @@ as $$
 $$;
 
 -- Pastikan struktur tabel orders cocok dengan website.
-alter table public.orders add column if not exists product_id uuid;
+-- product_id dibiarkan apa adanya/tidak dipakai saat insert, supaya aman
+-- untuk proyek lama yang memakai ID angka maupun proyek baru yang memakai UUID.
 alter table public.orders add column if not exists order_type text not null default 'Produk katalog';
 alter table public.orders add column if not exists product_name text not null default 'Pesanan';
 alter table public.orders add column if not exists customer_name text;

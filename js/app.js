@@ -442,9 +442,11 @@ async function getAdminOrders() {
 
 async function saveAdminOrder(order) {
     if (usingSupabase) {
-        const product = currentProducts.find(item => item.name === order.productName);
         const { error } = await supabaseClient.from('orders').insert({
-            product_id: product?.id || null,
+            // Tidak mengirim ID produk: beberapa proyek lama memakai bigint,
+            // sedangkan tabel products Supabase baru memakai UUID.
+            // Detail produk tetap dicatat lewat nama dan details di bawah.
+            product_id: null,
             order_type: order.type || 'Pesanan',
             product_name: order.productName || 'Pesanan',
             customer_name: order.customerName || null,
@@ -453,6 +455,7 @@ async function saveAdminOrder(order) {
         });
         if (!error) return true;
         console.warn('Pesanan Supabase tidak dapat disimpan.', error.message);
+        showToast(`Pesanan gagal masuk ke Supabase: ${error.message}`);
         return false;
     }
     try {
