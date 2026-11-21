@@ -430,6 +430,7 @@ async function getAdminOrders() {
             productName: order.product_name, details: order.details, createdAt: order.created_at
         }));
         console.warn('Pesanan Supabase tidak dapat dimuat.', error.message);
+        return [];
     }
     try {
         const orders = JSON.parse(localStorage.getItem(ADMIN_ORDERS_KEY) || '[]');
@@ -450,15 +451,18 @@ async function saveAdminOrder(order) {
             phone: order.phone || null,
             details: order.details || null
         });
-        if (!error) return;
+        if (!error) return true;
         console.warn('Pesanan Supabase tidak dapat disimpan.', error.message);
+        return false;
     }
     try {
         const orders = await getAdminOrders();
         orders.unshift(order);
         localStorage.setItem(ADMIN_ORDERS_KEY, JSON.stringify(orders.slice(0, 100)));
+        return true;
     } catch (error) {
         console.warn('Pesanan tidak dapat dicatat di browser.', error);
+        return false;
     }
 }
 
@@ -872,7 +876,7 @@ async function orderProductViaWhatsApp(productId) {
     // Buka jendela saat klik masih aktif, lalu catat pesanan sebelum diarahkan.
     const waPopup = window.open('', '_blank');
     if (waPopup) waPopup.opener = null;
-    await saveAdminOrder({
+    const orderSaved = await saveAdminOrder({
         id: Date.now(),
         type: 'Produk katalog',
         customerName,
@@ -881,6 +885,9 @@ async function orderProductViaWhatsApp(productId) {
         details: `${productCategory} - Rp ${formatRupiah(productPrice)}`,
         createdAt: new Date().toISOString()
     });
+    if (!orderSaved) {
+        showToast('Pesanan belum tersimpan ke dashboard. Periksa policy tabel orders di Supabase.');
+    }
     const waUrl = 'https://wa.me/' + WHATSAPP_ADMIN_NUMBER + '?text=' + encodeURIComponent(message);
     if (waPopup) waPopup.location.href = waUrl;
     else window.location.href = waUrl;
